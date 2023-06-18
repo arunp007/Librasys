@@ -1,0 +1,168 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibraSys Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        .container-fluid{
+            background: url(https://wallpaperaccess.com/full/267476.jpg);
+            height: 1000px;
+            background-size: cover;
+        }
+
+        .logo{
+            color: white;
+            font-size: 100px;
+            font-weight: bolder;
+            opacity: 0.3;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form{
+            background-color: black;
+            height: 750px;
+            padding-top: 30px;
+            opacity: 0.8;
+            border-radius: 10px;
+        }
+
+        .logo-image{
+            width: 150px;
+            height: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-top: 30px;
+            margin-bottom: -15px;
+        }
+
+        h1{
+            color: white;
+            font-size: 50px;
+            font-weight: bolder;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        input[type="text"]{
+            width: 500px;
+            margin-bottom: -70px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        input[type="password"]{
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-bottom: -70px;
+        }
+
+        .btn-dark{
+            width: 500px;
+            height: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-top: 30px;
+        }
+        
+        label{
+            color: gray;
+            margin-top: 100px;
+            margin-left: 230px;
+        }
+    
+        a{
+            color:gray !important;
+            font-weight: bolder;
+            margin-left: 5px;
+            font-size: 18px;
+            text-decoration: none !important;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-lg-12">
+                <h1 class="logo">Librasys</h1>
+            </div>
+            
+            <div class="col-xs-3 col-lg-3"></div>
+            
+            <div class="col-xs-6 col-lg-6">
+                <form action="" class="form">
+                    <img src="{% static 'images/logo.png' %}" class="logo-image">
+                    <h1>Admin</h1>
+                    <input type="text" class="form-control" id="email" placeholder="Email Address">
+                    <label id="email_error"></label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <label id="password_error"></label>
+                    <button class="btn btn-dark" type="submit" onclick="return validation()">Login</button>
+                
+                    <label for="">Don't have an account yet?<a href="">Signup</a></label>
+                </form>
+            </div>
+
+            <div class="col-xs-3 col-lg-3"></div>
+        </div>
+    </div>
+
+
+    <script>
+        function validation(){
+            var status = 1
+            var email = document.getElementById('email')
+            var password = document.getElementById('password')
+
+            if(email.value == ""){
+                document.getElementById('email').style.borderColor="red"
+                document.getElementById('email_error').innerHTML="** Please Enter Your Email Address **"
+                document.getElementById('email_error').style.color="red"
+                document.getElementById('email_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('email').style.borderColor="gray"
+                document.getElementById('email_error').style.display="none"
+                var status = 1
+            }
+
+            if(password.value == ""){
+                document.getElementById('password').style.borderColor="red"
+                document.getElementById('password_error').innerHTML="** Please Enter Your Password **"
+                document.getElementById('password_error').style.color="red"
+                document.getElementById('password_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('password').style.borderColor="gray"
+                document.getElementById('password_error').style.display="none"
+                var status = 1
+            }
+
+            if(status == 0){
+                return false
+            }
+
+            if(status == 1){
+                return true
+            }
+        }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>
