@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <style>
         .container-fluid{
-            background: url(https://wallpaperaccess.com/full/267476.jpg);
+            background: url(https://wallpaperaccess.com/full/4907599.jpg);
             height: 1000px;
             background-size: cover;
         }
@@ -17,7 +17,7 @@
             color: white;
             font-size: 100px;
             font-weight: bolder;
-            opacity: 0.3;
+            opacity: 0.7;
             text-align: center;
             margin-bottom: 20px;
         }
@@ -108,7 +108,7 @@
                     <label id="password_error"></label>
                     <button class="btn btn-dark" type="submit" onclick="return validation()">Login</button>
                 
-                    <label for="">Don't have an account yet?<a href="">Signup</a></label>
+                    <label for="">Don't have an account yet?<a href="{% url 'admin_signup' %}">Signup</a></label>
                 </form>
             </div>
 
