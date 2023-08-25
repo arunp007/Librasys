@@ -1,0 +1,356 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .logo{
+            width: 100px;
+        }
+
+        .nav-link{
+            font-size: 20px;
+        }
+        
+        .btn-secondary{
+            width: 100px;
+            border-radius: 100px;
+            background-color: black;
+            border: black;
+        }
+
+        .btn-secondary:hover{
+            background-color: black;
+        }
+
+        .carousel-item{
+            margin-top: 150px;
+        }
+
+        .carousel-control-next{
+            background-color: darkblue;
+            border: 2px solid darkblue;
+            height: 100px;
+            width: 100px;
+            margin-top: 158px;
+            display: flex;
+        }
+
+        .carousel-control-prev{
+            background-color: darkblue;
+            border: 2px solid darkblue;
+            height: 100px;
+            width: 100px;
+            margin-top: 158px;
+        }
+
+        .heading{
+            color: darkblue;
+            font-size: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .pic{
+            width: 320px;
+            height: 250px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .pic2{
+            width: 320px;
+            height: 250px;
+            margin-top: 100px;
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .paragraph{
+            margin-top: 40px;
+            margin-left: 30px;
+            margin-bottom: 100px;
+        }
+
+        .paragraph2{
+            margin-top: 30px;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+
+        #footer{
+            background-color: black !important;
+            margin-top: 250px;
+            color: white;
+            margin-bottom: -100px;
+        }
+
+        .heading3{
+            font-size: 25px;
+            font-weight: bolder;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .description{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 17px;
+            color: lightgrey;
+        }
+
+        #link{
+            font-size: 15px;
+            margin-top: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: lightgray;
+            text-decoration: none !important;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        #link:hover{
+            color: blue !important;
+        }
+
+        .fa-facebook{
+            background-color: white;
+            color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 8px;
+            margin-top: 20px;
+        }
+
+        .fa-twitter{
+            background-color: white;
+            color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 8px;
+        }
+
+        .fa-linkedin{
+            background-color: white;
+            color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 8px;
+        }
+
+        .fa-instagram{
+            background-color: white;
+            color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 8px;
+            margin-bottom: 100px;
+        }
+
+        .fa-headphones{
+            color: blue;
+            margin-right: 20px;
+            margin-left: 100px;
+            margin-top: 20px;
+        }
+
+        .fa-envelope{
+            color: blue;
+            margin-right: 20px;
+            margin-left: 100px;
+        }
+
+        .fa-location-arrow{
+            color: blue;
+            margin-right: 20px;
+            margin-left: 100px;
+            margin-bottom: 100px;
+        }
+
+        .fa-facebook:hover{
+            background-color: blue !important;
+        }
+
+        .fa-twitter:hover{
+            background-color: blue !important;
+        }
+
+        .fa-linkedin:hover{
+            background-color: blue !important;
+        }
+
+        .fa-instagram:hover{
+            background-color: blue !important;
+        }
+
+        .contact-details{
+            color: blue !important;
+        }
+
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary">
+        <a class="navbar-brand" href="{% url 'user_home' %}"><img src="{% static 'images/logo.png' %}" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'user_home' %}"><span class="fa fa-home"></span> Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><span class="fa fa-book"></span> Books</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><span class="fa fa-arrow-circle-o-right"></span> Return Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"><span class="fa fa-bell"></span> Notification</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <a class="btn btn-secondary my-2 my-sm-0" href="{% url 'user_logout' %}">Logout</a>
+          </form>
+        </div>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'images/slide1.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/slide2.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/slide3.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+         
+        </div>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-lg-12">
+                <h1 class="heading">Importance Of Reading Books</h1>
+            </div>
+
+            <div class="col-xs-3 col-lg-3">
+                <img src="{% static 'images/img2.jpg' %}" class="pic">
+            </div>
+
+            <div class="col-xs-1 col-lg-1"></div>
+
+            <div class="col-xs-6 col-lg-6">
+                <p class="paragraph">Reading books can boost intelligence in multiple ways. Firstly, it improves your vocabulary and broadens your knowledge base by introducing you to new words and concepts. Secondly, reading can help to improve your comprehension skills as it exercises your brain and trains you to think critically.</p>
+            </div>
+
+            <div class="col-xs-2 col-lg-2"></div>
+
+            <div class="col-xs-1 col-lg-1"></div>
+
+            <div class="col-xs-6 col-lg-6">
+                <h5 class="heading">What Are the Benefits of Reading Books?</h5>
+
+                <p class="paragraph">Reading books holds immense importance for personal, intellectual, and emotional development. Here are some key reasons why reading books is valuable:</p>
+                <p class="paragraph2"><b>1) Knowledge and Learning:</b><br><br> Books are a treasure trove of information. They cover a wide range of subjects, allowing readers to learn about history, science, culture, philosophy, and more. Reading books can expand your knowledge base and provide insights into various topics.</p>
+                <p class="paragraph2"><b>2) Cognitive Stimulation:</b> <br><br> Reading requires active engagement of the brain. It improves critical thinking, analytical skills, and problem-solving abilities. It encourages readers to process and comprehend complex ideas, enhancing cognitive functioning.</p>
+                <p class="paragraph2"><b>3) Vocabulary and Language Skills:</b> <br><br> Exposure to well-written literature helps improve vocabulary and language proficiency. Readers encounter new words, phrases, and sentence structures, which can enhance their communication skills and writing abilities.</p>
+                <p class="paragraph2"><b>4) Imagination and Creativity:</b> <br><br> Books stimulate the imagination by transporting readers to different worlds, time periods, and situations. This creativity enhancement can extend to various aspects of life, including problem-solving, innovation, and artistic expression.</p>
+                <p class="paragraph2"><b>5) Empathy and Understanding:</b> <br><br> Reading fiction exposes readers to diverse characters and perspectives. This can foster empathy and a better understanding of different cultures, beliefs, and viewpoints, contributing to social and emotional intelligence.</p>
+            </div>
+
+            <div class="col-xs-1 col-lg-1"></div>
+
+            <div class="col-xs-3 col-lg-3">
+                <img src="{% static 'images/img1.jpg' %}" class="pic2">
+                
+                <img src="{% static 'images/img3.jpg' %}" class="pic2">
+            </div>
+
+            <div class="col-xs-1 col-lg-1"></div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid" id="footer">
+        <div class="row">
+          <div class="col-xs-4 col-lg-4">
+            <h5 class="heading3">About Us</h5>
+            <p class="description"> Librasys is a library management system that simplify all the process in a library. You can manage registration to buying books and return books using Librasys.</p>
+            <a href=""><span class="fa fa-facebook"></span></a>
+            <a href=""><span class="fa fa-twitter"></span></a>
+            <a href=""><span class="fa fa-linkedin"></span></a>
+            <a href=""><span class="fa fa-instagram"></span></a>
+          </div>
+      
+          <div class="col-xs-4 col-lg-4">
+            <h5 class="heading3">Company</h5>
+            <a href="" class="btn btn-link" id="link">About Us</a>
+            <a href="" class="btn btn-link" id="link">Contact Us</a>
+          </div>
+    
+          <div class="col-xs-4 col-lg-4">
+            <h5 class="heading3">Contact</h5>
+            <span class="fa fa-headphones"></span> <label class="contact-details">+918848193954</label><br>
+            <span class="fa fa-envelope"></span> <label class="contact-details">+918848193954</label><br>
+            <span class="fa fa-location-arrow"></span> <label class="contact-details">Librasys</label>
+          </div>
+        </div>
+    </div>
+    
+
+      
+
+    
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

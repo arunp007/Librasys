@@ -80,13 +80,13 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputFirstName4">First Name</label>
-                            <input type="text" class="form-control" name="fname" id="firstname" placeholder="First Name">
+                            <input type="text" class="form-control" name="fname" id="firstname" placeholder="First Name" value="{{update.firstname}}">
                             <label id="firstname_error"></label>
                         </div>
                         
                         <div class="form-group col-md-6">
                             <label for="inputLastName4">Last Name</label>
-                            <input type="text" class="form-control" name="lname" id="lastname" placeholder="Last Name">
+                            <input type="text" class="form-control" name="lname" id="lastname" placeholder="Last Name" value="{{update.lastname}}">
                             <label id="lastname_error"></label>
                         </div>
                     </div>
@@ -94,7 +94,7 @@
                     <div class="form-row">
                         <div class="form-inline">
                             <label for="inputState">Date Of Birth</label>
-                            <select name="day" id="day" class="form-control">
+                            <select name="day" id="day" class="form-control" vlaue="{{update.day}}">
                                 <option value="">Day</option>
                                 <option value="" value="">...</option>
                                 <option value="1">1</option>
@@ -131,25 +131,25 @@
                             </select>
                             <label id="day_error"></label>
             
-                            <select name="month" id="month" class="form-control">
+                            <select name="month" id="month" class="form-control" value="{{update.month}}">
                                 <option value="">Month</option>
                                 <option value="" value="">...</option>
-                                <option value="January">January</option>
-                                <option value="February">February</option>
-                                <option value="March">March</option>
-                                <option value="April">April</option>
-                                <option value="May">May</option>
-                                <option value="June">June</option>
-                                <option value="July">July</option>
-                                <option value="August">August</option>
-                                <option value="September">September</option>
-                                <option value="October">October</option>
-                                <option value="November">November</option>
-                                <option value="December">December</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
                             </select>
                             <label id="month_error"></label>
 
-                            <select name="year" id="year" class="form-control">
+                            <select name="year" id="year" class="form-control" value="{{update.year}}">
                                 <option value="">Year</option>
                                 <option value="" value="">...</option>
                                 <option value="1970">1970</option>
@@ -214,7 +214,7 @@
                     <div class="form-row">
                         <div class="form-group col-lg-6">
                             <label for="inputGender">Gender</label>
-                        <select name="gender" id="gender" class="form-control">
+                        <select name="gender" id="gender" class="form-control" value="{{update.gender}}">
                             <option value="">Gender</option>
                             <option value="" value="">...</option>
                             <option value="Male">Male</option>
@@ -228,7 +228,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="inputEmail">Permanent Address</label>
-                            <textarea name="address" id="address" class="form-control" cols="80" rows="2" placeholder="Address"></textarea>
+                            <textarea name="address" id="address" class="form-control" cols="80" rows="2" placeholder="Address" value="{{update.address}}"></textarea>
                             <label id="address_error"></label>
                         </div>
                     </div>
@@ -236,13 +236,13 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputLocation">Location</label>
-                            <input type="text" class="form-control" name="location" id="location" placeholder="Location">
+                            <input type="text" class="form-control" name="location" id="location" placeholder="Location" value="{{update.location}}">
                             <label id="location_error"></label>
                         </div>
     
                         <div class="form-group col-md-6">
                             <label for="inputUsername">Username</label>
-                            <input type="text" class="form-control" name="username" id="username" placeholder="Username">
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Username" value="{{update.username}}">
                             <label id="username_error"></label>
                         </div>
                     </div>
@@ -250,13 +250,13 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputEmail">Email Address</label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email Address" value="{{update.email}}">
                             <label id="email_error"></label>
                         </div>
     
                         <div class="form-group col-md-6">
                             <label for="inputUsername">Phone Number</label>
-                            <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone">
+                            <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone" value="{{update.phone}}">
                             <label id="phone_error"></label>
                         </div>
                     </div>
@@ -264,13 +264,13 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputPassword">Password</label>
-                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" onkeyup="return pass()">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" onkeyup="return pass()" value="{{update.password}}">
                             <label id="password_error"></label>
                         </div>
     
                         <div class="form-group col-md-6">
                             <label for="inputConfirmPassword">Confirm Password</label>
-                            <input type="password" class="form-control" name="cpassword" id="cpassword" placeholder="Confirm Password" onkeyup="return cpass()">
+                            <input type="password" class="form-control" name="cpassword" id="cpassword" placeholder="Confirm Password" onkeyup="return cpass()" value="{{update.cpassword}}">
                             <label id="cpassword_error"></label>
                         </div>
                     </div>

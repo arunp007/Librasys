@@ -187,14 +187,15 @@
             </div>
             
             <div class="col-xs-4 col-lg-4">
-                <form action="">
+                <form method="post">
+                    {% csrf_token %}
                     <img src="{% static 'images/logo.png' %}" class="logo">
                     <h1>Hello Again!</h1>
                     <p>welcome to Librasys the complete library system</p>
                     
-                    <input type="text" id="email" class="form-control" placeholder="Email Address">
+                    <input type="text" name="email" id="email" class="form-control" placeholder="Email Address">
                     <label id="email_error"></label>
-                    <input type="password" id="password" class="form-control" placeholder="Password">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Password">
                     <label id="password_error"></label>
                     <button type="submit" class="btn btn-success" onclick="return validation()">Login</button>
                     

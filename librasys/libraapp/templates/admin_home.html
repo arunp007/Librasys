@@ -293,20 +293,20 @@
             View
           </a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Admin Details</a>
-            <a class="dropdown-item" href="#">User Details</a>
-            <a class="dropdown-item" href="#">Librarian Details</a>
+            <a class="dropdown-item" href="{% url 'admin_table' %}">Admin Details</a>
+            <a class="dropdown-item" href="{% url 'user_table' %}">User Details</a>
+            <a class="dropdown-item" href="{% url 'librarian_table' %}">Librarian Details</a>
             <a class="dropdown-item" href="#">Book Details</a>
             <a class="dropdown-item" href="#">Buyer Details</a>
             <a class="dropdown-item" href="#">Return Details</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled"><span class="fa fa-bell"></span> Notifications</a>
+          <a class="nav-link"><span class="fa fa-bell"></span> Notifications</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <a class="btn btn-warning my-2 my-sm-0" type="submit"> Logout <span class="fa fa-arrow-right"></span></a>
+        <a class="btn btn-warning my-2 my-sm-0" href="{% url 'admin_logout' %}"> Logout <span class="fa fa-arrow-right"></span></a>
       </form>
     </div>
   </nav>
@@ -321,7 +321,7 @@
             <h5 class="grid-title">Admin Details</h5>
           </div>
           <div class="grid-container2">
-            <a href="" class="btn btn-link">Click Here <span class="fa fa-arrow-right"></span></a>
+            <a href="{% url 'admin_table' %}" class="btn btn-link">Click Here <span class="fa fa-arrow-right"></span></a>
           </div>
         </div>
       </div>
@@ -332,7 +332,7 @@
             <h5 class="grid-title">User Details</h5>
           </div>
           <div class="grid-container2">
-            <a href="" class="btn btn-link">Click Here <span class="fa fa-arrow-right"></span></a>
+            <a href="{% url 'user_table' %}" class="btn btn-link">Click Here <span class="fa fa-arrow-right"></span></a>
           </div>
         </div>
       </div>
@@ -344,7 +344,7 @@
             <h5 class="grid-title">Librarian Details</h5>
           </div>
           <div class="grid-container2">
-            <a href="" class="btn btn-link">Click Here <span class="fa fa-arrow-right"></span></a>
+            <a href="{% url 'librarian_table' %}" class="btn btn-link">Click Here <span class="fa fa-arrow-right"></span></a>
           </div>
         </div>
       </div>

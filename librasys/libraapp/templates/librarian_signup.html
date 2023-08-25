@@ -81,14 +81,14 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="inputFirstName4">First Name</label>
-                            <input type="text" class="form-control" name="fname" id="firstname" placeholder="First Name">
+                            <input type="text" class="form-control" name="fname" id="firstname" placeholder="First Name" value="{{update.firstname}}">
                         </div>
                         
                         <label id="firstname_error"></label>
 
                         <div class="form-group">
                             <label for="inputLastName4">Last Name</label>
-                            <input type="text" class="form-control" name="lname" id="lastname" placeholder="Last Name">
+                            <input type="text" class="form-control" name="lname" id="lastname" placeholder="Last Name" value="{{update.lastname}}">
                         </div>
 
                         <label id="lastname_error"></label>
@@ -98,14 +98,14 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="inputName">Library Name</label>
-                            <input type="text" class="form-control" name="library_name" id="library_name" placeholder="Library Name">
+                            <input type="text" class="form-control" name="library_name" id="library_name" placeholder="Library Name" value="{{update.library_name}}">
                         </div>
 
                         <label id="libraryname_error"></label>
     
                         <div class="form-group">
                             <label for="inputLocation">Library Location</label>
-                            <input type="text" class="form-control" name="library_location" id="library_location" placeholder="Library Location">
+                            <input type="text" class="form-control" name="library_location" id="library_location" placeholder="Library Location" value="{{update.library_location}}">
                         </div>
 
                         <label id="librarylocation_error"></label>
@@ -114,14 +114,14 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="inputEmail">Email Address</label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email Address" value="{{update.email}}">
                         </div>
 
                         <label id="email_error"></label>
     
                         <div class="form-group">
                             <label for="inputUsername">Phone Number</label>
-                            <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone">
+                            <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone" value="{{update.phone}}">
                         </div>
 
                         <label id="phone_error"></label>
@@ -131,14 +131,14 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="inputPassword">Password</label>
-                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" onkeyup="return pass()">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" onkeyup="return pass()" value="{{update.password}}">
                         </div>
 
                         <label id="password_error"></label>
     
                         <div class="form-group">
                             <label for="inputConfirmPassword">Confirm Password</label>
-                            <input type="password" class="form-control" name="cpassword" id="cpassword" placeholder="Confirm Password" onkeyup="return cpass()">
+                            <input type="password" class="form-control" name="cpassword" id="cpassword" placeholder="Confirm Password" onkeyup="return cpass()" value="{{update.cpassword}}">
                         </div>
 
                         <label id="cpassword_error"></label>
