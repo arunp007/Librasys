@@ -1,0 +1,296 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Books</title>
+    <style>
+        .logo{
+            width: 100px;
+        }
+
+        .nav-link{
+            font-size: 20px;
+        }
+
+        .dropdown-menu{
+            background-color: black;
+        }
+
+        .dropdown-item{
+            color: white;
+        }
+        
+        
+        .btn-secondary{
+            width: 100px;
+            border-radius: 100px;
+            background-color: black;
+            border: black;
+        }
+
+        .btn-secondary:hover{
+            background-color: black;
+        }
+
+        .container-fluid{
+            margin-top: 100px;
+        }
+
+        .card{
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            height: 680px;
+        }
+
+        .card-img-top{
+            height: 200px;
+        }
+
+        .btn-success{
+            width: 250px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+
+            
+        }
+
+
+
+
+
+
+
+
+        #footer{
+            background-color: black !important;
+            margin-top: 250px;
+            color: white;
+            margin-bottom: -100px;
+        }
+
+        .heading3{
+            font-size: 25px;
+            font-weight: bolder;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .description{
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 17px;
+            color: lightgrey;
+        }
+
+        #link{
+            font-size: 15px;
+            margin-top: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: lightgray;
+            text-decoration: none !important;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        #link:hover{
+            color: green !important;
+        }
+
+        .fa-facebook{
+            background-color: white;
+            color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 8px;
+            margin-top: 20px;
+        }
+
+        .fa-twitter{
+            background-color: white;
+            color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 8px;
+        }
+
+        .fa-linkedin{
+            background-color: white;
+            color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 8px;
+        }
+
+        .fa-instagram{
+            background-color: white;
+            color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 8px;
+            margin-bottom: 100px;
+        }
+
+        .fa-headphones{
+            color: green;
+            margin-right: 20px;
+            margin-left: 100px;
+            margin-top: 20px;
+        }
+
+        .fa-envelope{
+            color: green;
+            margin-right: 20px;
+            margin-left: 100px;
+        }
+
+        .fa-location-arrow{
+            color: green;
+            margin-right: 20px;
+            margin-left: 100px;
+            margin-bottom: 100px;
+        }
+
+        .fa-facebook:hover{
+            background-color: green !important;
+        }
+
+        .fa-twitter:hover{
+            background-color: green !important;
+        }
+
+        .fa-linkedin:hover{
+            background-color: green !important;
+        }
+
+        .fa-instagram:hover{
+            background-color: green !important;
+        }
+
+        .contact-details{
+            color: green !important;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <a class="navbar-brand" href="{% url 'librarian_home' %}"><img src="{% static 'images/logo.png' %}" class="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'librarian_home' %}"><span class="fa fa-home"></span> Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><span class="fa fa-book"></span> Books</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <span class="fa fa-eye"></span> View
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Buyer Details</a>
+                <a class="dropdown-item" href="#">Return Details</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                <span class="fa fa-plus"></span>  Add
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="{% url 'add_books' %}">Books</a>
+                </div>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href=""><span class="fa fa-bell"></span> Notification</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <a class="btn btn-secondary my-2 my-sm-0" href="{% url 'librarian_logout' %}">Logout</a>
+          </form>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            {% for i in books %}
+
+            <div class="col-xs-3 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="/media/{{i.image}}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">{{i.name}}</h5>
+                      <h6 class="card-author">{{i.author}}</h6>
+                      <p class="card-text">{{i.description}}</p>
+                      <h3 class="card-price"> ₹ {{i.price}}</h3>
+                      <a href="#" class="btn btn-success">Buy</a>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+           
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="container-fluid" id="footer">
+        <div class="row">
+          <div class="col-xs-4 col-lg-4">
+                <h5 class="heading3">About Us</h5>
+                <p class="description"> Librasys is a library management system that simplify all the process in a library. You can manage registration to buying books and return books using Librasys.</p>
+                <a href=""><span class="fa fa-facebook"></span></a>
+                <a href=""><span class="fa fa-twitter"></span></a>
+                <a href=""><span class="fa fa-linkedin"></span></a>
+                <a href=""><span class="fa fa-instagram"></span></a>
+          </div>
+        
+          <div class="col-xs-4 col-lg-4">
+                <h5 class="heading3">Company</h5>
+                <a href="" class="btn btn-link" id="link">About Us</a>
+                <a href="" class="btn btn-link" id="link">Contact Us</a>
+          </div>
+      
+          <div class="col-xs-4 col-lg-4">
+                <h5 class="heading3">Contact</h5>
+                <span class="fa fa-headphones"></span> <label class="contact-details">+918848193954</label><br>
+                <span class="fa fa-envelope"></span> <label class="contact-details">+918848193954</label><br>
+                <span class="fa fa-location-arrow"></span> <label class="contact-details">Librasys</label>
+          </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

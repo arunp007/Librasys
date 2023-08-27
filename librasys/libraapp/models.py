@@ -46,5 +46,16 @@ class Meta:
     db_table = 'admin_registration'
 
 
+class Books_data(models.Model):
+    name = models.TextField(max_length=50)
+    description = models.TextField(max_length=100)
+    author = models.TextField(max_length=50)
+    price = models.TextField(max_length=50)
+    image = models.CharField(max_length=200)
+
+class Meta:
+    db_table = 'books'
+
+
 
 

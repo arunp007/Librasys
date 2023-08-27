@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from random import random
+from django.core.files.storage import FileSystemStorage
 from.models import *
 
 def user_home(request):
@@ -137,9 +139,6 @@ def librarian_update(request,id):
         return render(request, 'librarian_signup.html', { 'update': update_data })
 
 
-
-
-
 def admin_home(request):
     return render(request, 'admin_home.html')
 
@@ -199,5 +198,68 @@ def admin_update(request,id):
         return render(request, 'admin_signup.html', { 'update': update_data })
     
 
+def add_books(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        description = request.POST['description']
+        author = request.POST['author']
+        price = request.POST['price']
+        image = request.FILES['image']
+        file_name = str(random())+image.name
+        image.name = file_name
+        file_object = FileSystemStorage()
+        file_object.save(file_name, image)
+        object_details = Books_data(name = name, description = description, author = author, price = price, image = image)
+        object_details.save()
+
+    else:
+        image = False
+    return render(request, 'add_books.html')
+
+
+def user_books(request):
+    books_data = Books_data.objects.all()
+    return render(request, 'user_books.html', {'books': books_data})
+
+
+def librarian_books(request):
+    books_data = Books_data.objects.all()
+    return render(request, 'librarian_book.html', {'books': books_data})
+
+def book_table(request):
+    book_details = Books_data.objects.all()
+    return render(request, 'book_table.html', {'book': book_details})
+
+def book_delete(request, id):
+    Books_data.objects.get(id = id).delete()
+    return redirect('book_table')
+
+def book_update(request, id):
+    update_data = ""
+    if request.method == 'POST':
+        name = request.POST['name']
+        author = request.POST['author']
+        description = request.POST['description']
+        price = request.POST['price']
+        image = request.FILES['image']
+        file_name = str(random())+image.name
+        image.name = file_name
+        file_object = FileSystemStorage()
+        file_object.save(file_name,image)
+        Books_data.objects.filter(id = id).update(name = name, author = author, description = description, price = price, image = image)
+        return redirect('book_table')
     
+    else:
+        update_data = Books_data.objects.get(id = id)
+        return render(request, 'add_books.html', {'update': update_data})
+
+
+
+
+
+
+
+
+
+
 
