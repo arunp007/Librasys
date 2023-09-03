@@ -64,13 +64,6 @@
             
         }
 
-
-
-
-
-
-
-
         #footer{
             background-color: black !important;
             margin-top: 250px;
@@ -249,7 +242,7 @@
                       <h6 class="card-author">{{i.author}}</h6>
                       <p class="card-text">{{i.description}}</p>
                       <h3 class="card-price"> ₹ {{i.price}}</h3>
-                      <a href="#" class="btn btn-success">Buy</a>
+                      <a href="{% url 'buyer' %}" class="btn btn-success">Buy</a>
                     </div>
                 </div>
             </div>

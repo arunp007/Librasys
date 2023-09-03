@@ -27,6 +27,14 @@
             background-color: black;
         }
 
+        .dropdown-menu{
+            background-color: black !important;
+        }
+
+        .dropdown-item{
+            color: white;
+        }
+
         .container-fluid{
             margin-top: 100px;
         }
@@ -54,12 +62,6 @@
 
             
         }
-        
-        
-        
-        
-        
-        
         
         #footer{
             background-color: black !important;
@@ -196,8 +198,13 @@
             <li class="nav-item active">
               <a class="nav-link" href="#"><span class="fa fa-book"></span> Books</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><span class="fa fa-arrow-circle-o-right"></span> Return Book</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  <span class="fa fa-eye"></span> View
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Return Book</a>
+                </div>
             </li>
             <li class="nav-item">
               <a class="nav-link"><span class="fa fa-bell"></span> Notification</a>
@@ -222,7 +229,7 @@
                       <h6 class="card-author">{{i.author}}</h6>
                       <p class="card-text">{{i.description}}</p>
                       <h3 class="card-price"> ₹ {{i.price}}</h3>
-                      <a href="#" class="btn btn-primary">Buy</a>
+                      <a href="{% url 'buyer' %}" class="btn btn-primary">Buy</a>
                     </div>
                 </div>
             </div>

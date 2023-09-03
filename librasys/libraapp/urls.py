@@ -29,4 +29,10 @@ urlpatterns = [
     path('book_table', views.book_table, name = 'book_table'),
     path('book_delete/<int:id>', views.book_delete, name = 'book_delete'),
     path('book_update/<int:id>', views.book_update, name = 'book_update'),
+    path('buyer', views.buyer, name = 'buyer'),
+    path('order', views.order, name = 'order'),
+    path('buyer_table', views.buyer_table, name = 'buyer_table'),
+    path('buyer_delete/<int:id>', views.buyer_delete, name = 'buyer_delete'),
+    path('buyer_update/<int:id>', views.buyer_update, name = 'buyer_update'),
+
 ]

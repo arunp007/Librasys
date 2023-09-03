@@ -27,6 +27,14 @@
             background-color: black;
         }
 
+        .dropdown-menu{
+            background-color: black !important;
+        }
+
+        .dropdown-item{
+            color: white;
+        }
+
         .carousel-item{
             margin-top: 150px;
         }
@@ -227,8 +235,13 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'user_books' %}"><span class="fa fa-book"></span> Books</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><span class="fa fa-arrow-circle-o-right"></span> Return Book</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  <span class="fa fa-eye"></span> View
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Return Book</a>
+                </div>
             </li>
             <li class="nav-item">
               <a class="nav-link"><span class="fa fa-bell"></span> Notification</a>
