@@ -298,7 +298,7 @@
             <a class="dropdown-item" href="{% url 'librarian_table' %}">Librarian Details</a>
             <a class="dropdown-item" href="{% url 'book_table' %}">Book Details</a>
             <a class="dropdown-item" href="{% url 'buyer_table' %}">Buyer Details</a>
-            <a class="dropdown-item" href="#">Return Details</a>
+            <a class="dropdown-item" href="{% url 'return_table' %}">Return Details</a>
           </div>
         </li>
         <li class="nav-item">
@@ -379,7 +379,7 @@
             <h5 class="grid-title">Return Details</h5>
           </div>
           <div class="grid-container2">
-            <a href="" class="btn btn-link">Click Here <span class="fa fa-arrow-right"></span></a>
+            <a href="{% url 'return_table' %}" class="btn btn-link">Click Here <span class="fa fa-arrow-right"></span></a>
           </div>
         </div>
       </div>

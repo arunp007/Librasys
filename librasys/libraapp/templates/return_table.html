@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buyer Details</title>
+    <title>Return Details</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <style>
         .container-fluid{
@@ -15,7 +15,7 @@
             font-weight: bolder;
             font-family: 'Times New Roman', Times, serif;
             text-align: center;
-            color: orange;
+            color: green
         }
 
         hr{
@@ -33,7 +33,7 @@
             <div class="col-xs-12 col-lg-12">
                 <h1>Buyer Details</h1>
                 <hr>
-                <table class="table table-warning" border="2">
+                <table class="table table-success" border="2">
                     <tr>
                         <th>Buyer Id</th>
                         <th>Full Name</th>
@@ -50,7 +50,7 @@
                         <th>Delete</th>
                     </tr>
 
-                    {% for i in buyer %}
+                    {% for i in return %}
 
                     <tr>
                         <td>{{i.id}}</td>
@@ -64,8 +64,8 @@
                         <td>{{i.purchase_date}}</td>
                         <td>{{i.return_date}}</td>
                         <td>{{i.return_policy}}</td>
-                        <td><a href="{% url 'buyer_update' i.id %}" class="btn btn-primary">Update</a></td>
-                        <td><a href="{% url 'buyer_delete' i.id %}" class="btn btn-danger">Delete</a></td>
+                        <td><a href="{% url 'return_update' i.id %}" class="btn btn-primary">Update</a></td>
+                        <td><a href="{% url 'return_delete' i.id %}" class="btn btn-danger">Delete</a></td>
                     </tr>
 
                     {% endfor %}

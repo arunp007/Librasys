@@ -34,5 +34,9 @@ urlpatterns = [
     path('buyer_table', views.buyer_table, name = 'buyer_table'),
     path('buyer_delete/<int:id>', views.buyer_delete, name = 'buyer_delete'),
     path('buyer_update/<int:id>', views.buyer_update, name = 'buyer_update'),
-
+    path('return_book', views.return_book, name = 'return_book'),
+    path('return_success', views.return_success, name = 'return_success'),
+    path('return_table', views.return_table, name = 'return_table'),
+    path('return_delete/<int:id>', views.return_delete, name = 'return_delete'),
+    path('return_update/<int:id>', views.return_update, name = 'return_update'),
 ]

@@ -72,6 +72,21 @@ class Buyer(models.Model):
 class Meta:
     db_table = 'buyer_details'
 
+class Return_book(models.Model):
+    fullname = models.TextField(max_length=100)
+    location = models.TextField(max_length=100)
+    address = models.TextField(max_length=100)
+    email = models.TextField(max_length=100)
+    phone = models.TextField(max_length=100)
+    book = models.TextField(max_length=100)
+    author = models.TextField(max_length=100)
+    purchase_date = models.TextField(max_length=100)
+    return_date = models.TextField(max_length=100)
+    return_policy = models.TextField(max_length=100)
+
+class Meta:
+    db_table = 'return_book'
+
 
 
 

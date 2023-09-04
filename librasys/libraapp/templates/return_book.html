@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librasys</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        .container-fluid{
+            background: url('https://images.pexels.com/photos/109391/pexels-photo-109391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=1550&dpr=1');
+            height: 1500px !important;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        form{
+            background-color: white;
+            height: 1150px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            border-radius: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        h4{
+            padding-top: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bolder;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        hr{
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .form-control{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+            background-color: white;
+            color: black;
+        }
+
+        p{
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+        }
+
+        .btn-success{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 700px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-xs-3 col-lg-3"></div>
+
+            <div class="col-xs-6 col-lg-6">
+                <form method="post">
+                    {% csrf_token %}
+                    <h4>Buyer Details</h4>
+                    <hr>
+                    <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Full Name" value="{{u.fullname}}">
+                    <label id="fullname_error"></label>
+                    <input type="text" class="form-control" name="location" id="location" placeholder="Location" value="{{u.location}}">
+                    <label id="location_error"></label>
+                    <input type="text" class="form-control" name="address" id="address" placeholder="Permanent Address" value="{{u.address}}">
+                    <label id="address_error"></label>
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Email Address" value="{{u.email}}">
+                    <label id="email_error"></label>
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone Number" value="{{u.phone}}">
+                    <label id="phone_error"></label>
+                    <h4>Book Details</h4>
+                    <hr>
+
+                    <select name="book" id="book" class="form-control">
+                        <option value="" value="{{u.book}}">Select Book Name</option>
+                        <option value="Aarachaar">Aarachaar</option>
+                        <option value="Aadujeevitham">Aadujeevitham</option>
+                        <option value="Balyakalasakhi">Balyakalasakhi</option>
+                        <option value="Chemmeen">Chemmeen</option>
+                        <option value="Frankenstein">Frankenstein</option>
+                        <option value="Jane Eyre">Jane Eyre</option>
+                        <option value="Khasakkinte Ithihasam">Khasakkinte Ithihasam</option>
+                        <option value="Kayar">Kayar</option>
+                        <option value="Mayyaszhipuzhayude Theerangalil">Mayyaszhipuzhayude Theerangalil</option>
+                        <option value="Manju">Manju</option>
+                        <option value="Meesha">Meesha</option>
+                        <option value="Marthandavarma">Marthandavarma</option>
+                        <option value="Nineteen Eighty Four">Nineteen Eighty Four</option>
+                        <option value="Naalukettu">Naalukettu</option>
+                        <option value="Oru Desathinte Kada">Oru Desathinte Kada</option>
+                        <option value="Pathummayude Aadu">Pathummayude Aadu</option>
+                        <option value="Pride And Prejudice">Pride And Prejudice</option>
+                        <option value="Randamoozham">Randamoozham</option>
+                        <option value="The Great Gatsby">The Great Gatsby</option>
+                        <option value="To Kill A Mockingbird">To Kill A Mockingbird</option>
+                        <option value="The Lord of the Ring">The Lord of the Ring</option>
+                        <option value="The Hunger Games">The Hunger Games</option>
+                        <option value="Ulysses">Ulysses</option>
+                        <option value="Wuthering Heights">Wuthering Heights</option>
+                    </select>
+
+                    <label id="book_error"></label>
+
+                    <select name="author" id="author" class="form-control">
+                        <option value="" value="{{u.author}}">Select Author</option>
+                        <option value="S.K.Pottekkatt">S.K.Pottekkatt</option>
+                        <option value="Vaikom Muhammed Basheer">Vaikom Muhammed Basheer</option>
+                        <option value="M.T.Vasudevan Nair">M.T.Vasudevan Nair</option>
+                        <option value="O.V.Vijayan">O.V.Vijayan</option>
+                        <option value="M.Mukundan">M.Mukundan</option>
+                        <option value="Thakazhi Sivasankara Pillai">Thakazhi Sivasankara Pillai</option>
+                        <option value="K.R.Meera">K.R.Meera</option>
+                        <option value="S.Hareesh">S.Hareesh</option>
+                        <option value="C.V.Raman Pilla">C.V.Raman Pilla</option>
+                        <option value="Benyamin">Benyamin</option>
+                        <option value="Emily Bronte">Emily Bronte</option>
+                        <option value="James Joyes">James Joyes</option>
+                        <option value="F. Scott Fitzgerald">F. Scott Fitzgerald</option>
+                        <option value="George Orwell">George Orwell</option>
+                        <option value="Harper Lee">Harper Lee</option>
+                        <option value="Charlotte Bronte">Charlotte Bronte</option>
+                        <option value="Mary Shelley	">Mary Shelley</option>
+                        <option value="Jane Austen">Jane Austen</option>
+                        <option value="J.R.R.Tolkien">J.R.R.Tolkien</option>
+                        <option value="Suzanne Collins">Suzanne Collins</option>
+                    </select>
+
+                    <label id="author_error"></label>
+
+                    <label>Book Purchasing Date</label>
+                    <input type="date" class="form-control" name="purchase_date" id="purchase_date" placeholder="Book Purchasing Date" value="{{u.purchase_date}}">
+                    <label id="purchase_date_error"></label>
+                    <label>Book Returning Date</label>
+                    <input type="date" class="form-control" name="return_date" id="return_date" placeholder="Book Returning Date" value="{{u.return_date}}">
+                    <label id="return_date_error"></label>
+                    <p><input type="checkbox" name="return_policy" value="yes" checked> By Clicking this checkbox, you agree that we will charge you 50rp as fine if you dont return book on time.</p>
+                    <button class="btn btn-success" onclick="return validation()">Enter</button>
+                </form>
+            </div>
+
+            <div class="col-xs-3 col-lg-3"></div>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function validation(){
+            var status = 1
+            var name = document.getElementById('fullname')
+            var location = document.getElementById('location')
+            var address = document.getElementById('address')
+            var email = document.getElementById('email')
+            var phone = document.getElementById('phone')
+            var book = document.getElementById('book')
+            var author = document.getElementById('author')
+            var pdate = document.getElementById('purchase_date')
+            var rdate = document.getElementById('return_date')
+
+            if(name.value == ""){
+                document.getElementById('fullname').style.borderColor="red"
+                document.getElementById('fullname_error').innerHTML="** Enter Your Fullname **"
+                document.getElementById('fullname_error').style.color="red"
+                document.getElementById('fullname_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('fullname').style.borderColor="black"
+                document.getElementById('fullname_error').style.display="none"
+                var status = 1
+            }
+
+            if(location.value == ""){
+                document.getElementById('location').style.borderColor="red"
+                document.getElementById('location_error').innerHTML="** Enter Your Location **"
+                document.getElementById('location_error').style.color="red"
+                document.getElementById('location_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('location').style.borderColor="black"
+                document.getElementById('location_error').style.display="none"
+                var status = 1
+            }
+
+            if(address.value == ""){
+                document.getElementById('address').style.borderColor="red"
+                document.getElementById('address_error').innerHTML="** Enter Your Permanent Address **"
+                document.getElementById('address_error').style.color="red"
+                document.getElementById('address_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('address').style.borderColor="black"
+                document.getElementById('address_error').style.display="none"
+                var status = 1
+            }
+
+            if(email.value == ""){
+                document.getElementById('email').style.borderColor="red"
+                document.getElementById('email_error').innerHTML="** Enter Your Email Address **"
+                document.getElementById('email_error').style.color="red"
+                document.getElementById('email_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('email').style.borderColor="black"
+                document.getElementById('email_error').style.display="none"
+                var status = 1
+            }
+
+            if(phone.value == ""){
+                document.getElementById('phone').style.borderColor="red"
+                document.getElementById('phone_error').innerHTML="** Enter Your Phone Number **"
+                document.getElementById('phone_error').style.color="red"
+                document.getElementById('phone_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('phone').style.borderColor="black"
+                document.getElementById('phone_error').style.display="none"
+                var status = 1
+            }
+
+            if(book.value == ""){
+                document.getElementById('book').style.borderColor="red"
+                document.getElementById('book_error').innerHTML="** Enter Your Book Name **"
+                document.getElementById('book_error').style.color="red"
+                document.getElementById('book_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('book').style.borderColor="black"
+                document.getElementById('book_error').style.display="none"
+                var status = 1
+            }
+
+            if(author.value == ""){
+                document.getElementById('author').style.borderColor="red"
+                document.getElementById('author_error').innerHTML="** Enter Your Author Name **"
+                document.getElementById('author_error').style.color="red"
+                document.getElementById('author_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('author').style.borderColor="black"
+                document.getElementById('author_error').style.display="none"
+                var status = 1
+            }
+
+            if(pdate.value == ""){
+                document.getElementById('purchase_date').style.borderColor="red"
+                document.getElementById('purchase_date_error').innerHTML="** Enter Your Book Purchasing Date **"
+                document.getElementById('purchase_date_error').style.color="red"
+                document.getElementById('purchase_date_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('purchase_date').style.borderColor="black"
+                document.getElementById('purchase_date_error').style.display="none"
+                var status = 1
+            }
+
+            if(rdate.value == ""){
+                document.getElementById('return_date').style.borderColor="red"
+                document.getElementById('return_date_error').innerHTML="** Enter Your Book Returning Date **"
+                document.getElementById('return_date_error').style.color="red"
+                document.getElementById('return_date_error').style.display="block"
+                var status = 0
+            }
+
+            else{
+                document.getElementById('return_date').style.borderColor="black"
+                document.getElementById('return_date_error').style.display="none"
+                var status = 1
+            }
+
+            if(status == 1){
+                return true
+            }
+
+            if(status == 0){
+                return false
+            }
+        }
+    </script>
+
+
+
+
+
+    
+    
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

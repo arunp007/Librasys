@@ -303,6 +303,57 @@ def buyer_update(request,id):
         return render(request, 'buyer.html', {'update' : update_data})
 
 
+def return_book(request):
+    if request.method == 'POST':
+        fullname = request.POST['fullname']
+        location = request.POST['location']
+        address = request.POST['address']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        book = request.POST['book']
+        author = request.POST['author']
+        purchase_date = request.POST['purchase_date']
+        return_date = request.POST['return_date']
+        return_policy = request.POST['return_policy']
+        return_details = Return_book(fullname = fullname, location = location, address = address, email = email, phone = phone, book = book, author = author, purchase_date = purchase_date, return_date = return_date, return_policy = return_policy)
+        return_details.save()
+        return redirect('return_success')
+    return render(request, 'return_book.html')
+
+def return_success(request):
+    return render(request, 'return.html')
+
+
+def return_table(request):
+    return_data = Return_book.objects.all()
+    return render(request, 'return_table.html', {'return': return_data})
+
+
+def return_delete(request, id):
+    Return_book.objects.get(id = id).delete()
+    return redirect('return_table')
+
+def return_update(request, id):
+    update_data = ""
+    if request.method == 'POST':
+        fullname = request.POST['fullname']
+        location = request.POST['location']
+        address = request.POST['address']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        book = request.POST['book']
+        author = request.POST['author']
+        purchase_date = request.POST['purchase_date']
+        return_date = request.POST['return_date']
+        Return_book.objects.filter(id = id).update(fullname = fullname, location = location, address = address, email = email, phone = phone, book = book, author = author, purchase_date = purchase_date, return_date = return_date)
+        return redirect('return_table')
+    
+    else:
+        update_data = Return_book.objects.get(id = id)
+        return render(request, 'return_book.html', {'u': update_data})
+
+
+
 
 
 
