@@ -353,7 +353,32 @@ def return_update(request, id):
         return render(request, 'return_book.html', {'u': update_data})
 
 
+def message(request):
+    if request.method == 'POST':
+        message = request.POST['message']
+        message_data = Message(message = message)
+        message_data.save()
+    return render(request, 'message.html')
 
+def admin_notification(request):
+    message_details = Message.objects.all()
+    return render(request, 'admin_notification.html', {'message': message_details})
+
+def user_notification(request):
+    message_data1 = Message.objects.all()
+    return render(request, 'user_notification.html', {'message': message_data1})
+
+def librarian_notification(request):
+    message_data2 = Message.objects.all()
+    return render(request, 'librarian_notification.html', {'message': message_data2})
+
+def message_table(request):
+    message_data = Message.objects.all()
+    return render(request, 'message_table.html', {'message': message_data})
+
+def message_delete(request, id):
+    Message.objects.get(id = id).delete()
+    return redirect('message_table')
 
 
 

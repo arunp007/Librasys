@@ -88,5 +88,12 @@ class Meta:
     db_table = 'return_book'
 
 
+class Message(models.Model):
+    message = models.TextField(max_length=100)
+
+class Meta:
+    db_table = 'message'
+
+
 
 

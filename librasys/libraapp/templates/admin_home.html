@@ -125,6 +125,45 @@
         border-top-right-radius: 15px;
       }
 
+      .grid-container8{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 300px;
+        height: 150px;
+        background-color: gold;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+
+      .grid-container9{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 300px;
+        height: 150px;
+        background-color: grey;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+
+      .grid-container10{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 300px;
+        height: 150px;
+        background-color: olivedrab;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+
       .grid:hover{
         transform: translateY(-20px)
       }
@@ -299,10 +338,13 @@
             <a class="dropdown-item" href="{% url 'book_table' %}">Book Details</a>
             <a class="dropdown-item" href="{% url 'buyer_table' %}">Buyer Details</a>
             <a class="dropdown-item" href="{% url 'return_table' %}">Return Details</a>
+            <a class="dropdown-item" href="{% url 'message' %}">Send Message</a>
+            <a class="dropdown-item" href="{% url 'message_table' %}">Message Details</a>
+            <a class="dropdown-item" href="">Contact Details</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link"><span class="fa fa-bell"></span> Notifications</a>
+          <a class="nav-link" href="{% url 'admin_notification' %}"><span class="fa fa-bell"></span> Notifications</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -380,6 +422,42 @@
           </div>
           <div class="grid-container2">
             <a href="{% url 'return_table' %}" class="btn btn-link">Click Here <span class="fa fa-arrow-right"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-3 col-lg-3">
+        <div class="grid">
+          <div class="grid-container8">
+            <img src="{% static 'images/message.png' %}" class="grid-icon" style="width: 80px !important; padding-top: 30px !important; padding-bottom: 30px !important;">
+            <h5 class="grid-title">Send Message</h5>
+          </div>
+          <div class="grid-container2">
+            <a href="{% url 'message' %}" class="btn btn-link">Click Here <span class="fa fa-arrow-right"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-3 col-lg-3">
+        <div class="grid">
+          <div class="grid-container10">
+            <img src="{% static 'images/message.png' %}" class="grid-icon" style="width: 80px !important; padding-top: 30px !important; padding-bottom: 30px !important;">
+            <h5 class="grid-title">Message Details</h5>
+          </div>
+          <div class="grid-container2">
+            <a href="{% url 'message_table' %}" class="btn btn-link">Click Here <span class="fa fa-arrow-right"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-3 col-lg-3">
+        <div class="grid">
+          <div class="grid-container9">
+            <img src="{% static 'images/contact.png' %}" class="grid-icon">
+            <h5 class="grid-title">Contact Details</h5>
+          </div>
+          <div class="grid-container2">
+            <a href="" class="btn btn-link">Click Here <span class="fa fa-arrow-right"></span></a>
           </div>
         </div>
       </div>

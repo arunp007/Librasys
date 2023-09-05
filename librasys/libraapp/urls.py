@@ -39,4 +39,11 @@ urlpatterns = [
     path('return_table', views.return_table, name = 'return_table'),
     path('return_delete/<int:id>', views.return_delete, name = 'return_delete'),
     path('return_update/<int:id>', views.return_update, name = 'return_update'),
+    path('message', views.message, name = 'message'),
+    path('admin_notification', views.admin_notification, name = 'admin_notification'),
+    path('user_notification', views.user_notification, name = 'user_notification'),
+    path('librarian_notification', views.librarian_notification, name = 'librarian_notification'),
+    path('message_table', views.message_table, name = 'message_table'),
+    path('message_delete/<int:id>', views.message_delete, name = 'message_delete'),
+
 ]
