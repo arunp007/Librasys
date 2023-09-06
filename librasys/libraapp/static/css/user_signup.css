@@ -1,0 +1,59 @@
+.container-fluid{
+    background-color: lightskyblue;
+}
+
+form{
+    background-color: white !important;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    height: 1150px;
+    border-radius: 10px;
+    border-top: 10px solid blue;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h1{
+    color: darkblue;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+hr{
+    background-color: lightblue;
+    margin-bottom: 50px;
+}
+
+label{
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.form-control{
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+input[type="checkbox"]{
+    margin-top: 30px;
+}
+
+.btn-primary{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.btn-danger{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

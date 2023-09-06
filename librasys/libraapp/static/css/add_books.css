@@ -1,0 +1,54 @@
+.container-fluid{
+    background: url('https://images.pexels.com/photos/1083515/pexels-photo-1083515.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    height: 1000px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+form{
+    background: rgb(110, 110, 130, 0.5);
+    margin-top: 100px;
+    height: 700px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h1{
+    color: black;
+    font-size: 45px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+hr{
+    background-color: black;
+    margin-bottom: 30px;
+}
+
+label{
+    color: black;
+}
+
+.form-control{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-secondary{
+    background-color: black;
+    border: black;
+    width: 500px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+
+

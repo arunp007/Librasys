@@ -45,5 +45,10 @@ urlpatterns = [
     path('librarian_notification', views.librarian_notification, name = 'librarian_notification'),
     path('message_table', views.message_table, name = 'message_table'),
     path('message_delete/<int:id>', views.message_delete, name = 'message_delete'),
+    path('main_home', views.main_home, name = 'main_home'),
+    path('contact_table', views.contact_table, name = 'contact_table'),
+    path('contact_delete/<int:id>', views.contact_delete, name = 'contact_delete'),
+
+
 
 ]

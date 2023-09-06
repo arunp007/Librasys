@@ -1,0 +1,90 @@
+.container-fluid{
+    background: url('https://wallpaperaccess.com/full/4907599.jpg');
+    height: 1000px;
+    background-size: cover;
+}
+
+.logo{
+    color: white;
+    font-size: 100px;
+    font-weight: bolder;
+    opacity: 0.7;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form{
+    background-color: black;
+    height: 750px;
+    padding-top: 30px;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+.logo-image{
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: -15px;
+}
+
+h1{
+    color: white;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+input[type="text"]{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="password"]{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-dark{
+    width: 500px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 30px;
+}
+
+.label{
+    color: gray;
+    margin-top: 100px;
+    margin-left: 230px;
+}
+
+a{
+    color:gray !important;
+    font-weight: bolder;
+    margin-left: 5px;
+    font-size: 18px;
+    text-decoration: none !important;
+}
+
+#email_error{
+    margin-left: 110px;
+}
+
+#password_error{
+    margin-left: 110px;
+}
+
+#error{
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

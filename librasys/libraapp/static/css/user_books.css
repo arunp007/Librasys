@@ -1,0 +1,172 @@
+.logo{
+    width: 100px;
+}
+
+.nav-link{
+    font-size: 20px;
+}
+
+.btn-secondary{
+    width: 100px;
+    border-radius: 100px;
+    background-color: black;
+    border: black;
+}
+
+.btn-secondary:hover{
+    background-color: black;
+}
+
+.dropdown-menu{
+    background-color: black !important;
+}
+
+.dropdown-item{
+    color: white;
+}
+
+.container-fluid{
+    margin-top: 100px;
+}
+
+.card{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 680px;
+}
+
+.card-img-top{
+    height: 200px;
+}
+
+.btn-primary{
+    width: 250px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+    
+}
+
+#footer{
+    background-color: black !important;
+    margin-top: 250px;
+    color: white;
+    margin-bottom: -100px;
+}
+
+.heading3{
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.description{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: lightgrey;
+}
+
+#link{
+    font-size: 15px;
+    margin-top: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: lightgray;
+    text-decoration: none !important;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#link:hover{
+    color: blue !important;
+}
+
+.fa-facebook{
+    background-color: white;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    text-align: center;
+    padding-top: 8px;
+    margin-top: 20px;
+}
+
+.fa-twitter{
+    background-color: white;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.fa-linkedin{
+    background-color: white;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.fa-instagram{
+    background-color: white;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    text-align: center;
+    padding-top: 8px;
+    margin-bottom: 100px;
+}
+
+.fa-headphones{
+    color: blue;
+    margin-right: 20px;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.fa-envelope{
+    color: blue;
+    margin-right: 20px;
+    margin-left: 100px;
+}
+
+.fa-location-arrow{
+    color: blue;
+    margin-right: 20px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+}
+
+.fa-facebook:hover{
+    background-color: blue !important;
+}
+
+.fa-twitter:hover{
+    background-color: blue !important;
+}
+
+.fa-linkedin:hover{
+    background-color: blue !important;
+}
+
+.fa-instagram:hover{
+    background-color: blue !important;
+}
+
+.contact-details{
+    color: blue !important;
+}

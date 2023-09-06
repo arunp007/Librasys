@@ -380,6 +380,20 @@ def message_delete(request, id):
     Message.objects.get(id = id).delete()
     return redirect('message_table')
 
+def main_home(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        message = request.POST['message']
+        contact_data = Contact(name = name, email = email, message = message)
+        contact_data.save()
+    return render(request, 'main_home.html')
 
+def contact_table(request):
+    contact_details = Contact.objects.all()
+    return render(request, 'contact_table.html', {'contact': contact_details})
 
+def contact_delete(request, id):
+    Contact.objects.get(id = id).delete()
+    return redirect('contact_table')
 

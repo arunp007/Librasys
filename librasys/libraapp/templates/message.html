@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,52 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Send Message</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <style>
-        .container-fluid{
-            background-color: lightblue;
-            height: 800px;
-        }
-
-        form{
-            margin-top: 100px;
-            margin-bottom: 100px;
-            background-color: white;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            height: 600px;
-            border-radius: 10px;
-        }
-
-        h1{
-            font-size: 40px;
-            font-family: 'Times New Roman', Times, serif;
-            font-weight: bolder;
-            color: darkblue;
-            text-align: center;
-            margin-top: 20px;
-            margin-bottom: 30px;
-        }
-
-        .form-control{
-            margin-bottom: 10px;
-        }
-
-        .btn-primary{
-            width: 200px;
-            border-radius: 100px;
-            margin-top: 30px;
-            background-color: darkblue !important;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-        }
-
-        label{
-            margin-bottom: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'css/message.css' %}">
+    <script src="{% static 'javascript/message_validation.js' %}"></script>   
+    
 </head>
 <body>
     <div class="container-fluid">
@@ -73,35 +31,6 @@
         </div>
     </div>
     
-
-    <script>
-        function validation(){
-            var status = 1
-            var message = document.getElementById('message')
-
-            if(message.value == ""){
-                document.getElementById('message').style.borderColor="red"
-                document.getElementById('message_error').innerHTML="** Enter Your Message **"
-                document.getElementById('message_error').style.color="red"
-                document.getElementById('message_error').style.display="block"
-                var status = 0
-            }
-
-            else{
-                document.getElementById('message').style.borderColor="black"
-                document.getElementById('message_error').style.display="none"
-                var status = 1
-            }
-
-            if(status == 1){
-                return true
-            }
-
-            if(status == 0){
-                return false
-            }
-        }
-    </script>
 
 
 

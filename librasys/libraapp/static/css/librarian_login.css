@@ -1,0 +1,126 @@
+.container-fluid{
+    background: url(https://wallpaperaccess.com/full/634084.jpg);
+    height: 900px;
+}
+
+.container{
+    background-color: lightgreen;
+    width: 500px;
+    height: 650px;
+    padding-top: 150px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 50px;
+    margin-right: -10px;
+}
+
+.carousel-item{
+    width: 160px;
+    height: 310px;
+    margin-left: 30px;
+}
+
+.d-block{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#carousel1{
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+#carousel2{
+    margin-top: -250px;
+    margin-left: 180px;
+}
+
+form{
+    background-color: white;
+    width: 500px;
+    height: 650px;
+    margin-left: -9px;
+    margin-top: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 30px;
+
+}
+
+.logo{
+    width: 80px !important;
+    height: 80px !important;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+h1{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+p{
+    color: gray;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+input[type="text"]{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+input[type="password"]{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-success{
+    width: 400px;
+    height: 38px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 30px;
+}
+
+.label{
+    color: gray;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.signup-link{
+    text-decoration: none !important;
+    color: darkgreen !important;
+    font-weight: bolder;
+    margin-left: 5px;
+}
+
+.info{
+    color:antiquewhite;
+    margin-top: 100px;
+    opacity: 0.5;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+#email_error{
+    margin-left: 50px;
+}
+
+#password_error{
+    margin-left: 50px;
+}
